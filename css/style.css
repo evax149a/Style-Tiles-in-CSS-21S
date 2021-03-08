@@ -14,34 +14,44 @@ use the fonts in other ways in the font hierarchy etc. */
 
 /* change these */
 :root {
-  --bg-color: red;
-  --link-color: green;
-  --link-hover-color: blue;
-  --color-4: hotpink;
-  --color-5: rebeccapurple;
-
   --primary-font: "Open Sans", sans-serif;
   --secondary-font: "Droid Serif", serif;
   --main-text-color: #000;
 
-  --white-space: 1rem;
+  --white-space: 0.5rem;
 
-  --bg-color: #000;
-  --link-color: #000;
-  --link-hover-color: #000;
-  --color-4: #000;
-  --color-5: #000;
+  --bg-color: linear-gradient(
+    180deg,
+    #dcbdfb,
+    #bae3c0,
+    #fdffc9,
+    #d5f7ff,
+    #ffd5f8
+  );
+  --link-color: ;
+  --link-hover-color: ;
+  --color-1: #c691fc;
+  --color-2: #90e39c;
+  --color-3: #f7fa9d;
+  --color-4: #9cebfd;
+  --color-5: #f7a1e9;
+  --color-6: #dcbdfb;
+  --color-7: #bae3c0;
+  --color-8: #fdffc9;
+  --color-9: #d5f7ff;
+  --color-10: #ffd5f8;
 
   --primary-font: sans-serif;
   --secondary-font: serif;
-  --main-text-color: #000;
+  --main-text-color: #3b2b4b;
 
   --white-space: 2rem;
 }
 
 html {
-  font-size: 100%;
+  /* font-size: 62.5%; */
   font-family: var(--primary-font);
+  font-size: 100%;
 }
 
 img {
@@ -65,16 +75,14 @@ footer {
 
 .header-wrapper h1 {
   font-size: 3rem;
-  text-transform: uppercase;
-  letter-spacing: -2px;
   padding-right: 0.75em;
   font-weight: bold;
-  color: white;
+  color: var(--main-text-color);
 }
 
 .header-wrapper h2 {
   font-size: 1.6em;
-  color: rgba(255, 255, 255, 0.95);
+  color: var(--main-text-color);
   font-weight: bold;
   margin: var(--white-space) 0;
 }
@@ -82,10 +90,12 @@ footer {
 .header-wrapper h3 {
   font-size: 1.2rem;
   font-style: italic;
+  color: var(--main-text-color);
 }
 
 .header-wrapper h4 {
   font-size: 0.8rem;
+  color: var(--main-text-color);
 }
 
 main {
@@ -93,7 +103,7 @@ main {
 }
 
 section {
-  margin-bottom: calc(4 * var(--white-space));
+  margin-bottom: calc(2 * var(--white-space));
 }
 
 .section-heading {
@@ -110,7 +120,7 @@ ul {
 
 .swatches li {
   margin-right: 5vw;
-  height: 15vw;
+  height: 7vw;
   width: 20%;
 }
 
@@ -118,16 +128,20 @@ ul li:last-child {
   margin-right: 0;
 }
 
+.color-swatch-1-1 {
+  background-image: var(--bg-color);
+}
+
 .color-swatch-1 {
-  background-color: var(--bg-color);
+  background-color: var(--color-1);
 }
 
 .color-swatch-2 {
-  background-color: var(--link-color);
+  background-color: var(--color-2);
 }
 
 .color-swatch-3 {
-  background-color: var(--link-hover-color);
+  background-color: var(--color-3);
 }
 
 .color-swatch-4 {
@@ -138,6 +152,26 @@ ul li:last-child {
   background-color: var(--color-5);
 }
 
+.color-swatch-6 {
+  background-color: var(--color-6);
+}
+
+.color-swatch-7 {
+  background-color: var(--color-7);
+}
+
+.color-swatch-8 {
+  background-color: var(--color-8);
+}
+
+.color-swatch-9 {
+  background-color: var(--color-9);
+}
+
+.color-swatch-10 {
+  background-color: var(--color-10);
+}
+
 .textures li {
   height: 30vw;
   width: 40%;
@@ -145,19 +179,29 @@ ul li:last-child {
 }
 
 .texture-swatch-1 {
-  background: url(../img/pw_maze_white.png) top left repeat;
+  background: url(../img/klistermaerker-farverige-malede-paskeag-panorama.jpg\ copy.jpg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: auto;
 }
 
 .texture-swatch-2 {
-  background: url(../img/subtle_grunge.png) top left repeat;
-}
-
-.texture-swatch-1 {
-  background: url(../img/pw_maze_white.png) top left repeat;
+  background: url(../img/blå-copy.png);
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
 .texture-swatch-3 {
-  background: url(../img/white_paperboard.png) top left repeat;
+  background: url(../img/purple.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.texture-swatch-4 {
+  background: url(../img/gyserød.png);
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
 .images ul {
@@ -173,39 +217,39 @@ ul li:last-child {
 
 button {
   padding: 1rem;
+  border: transparent;
   border-radius: 4px;
-  background: var(--link-color);
+  background: var(--color-6);
   text-align: center;
   text-decoration: none;
-  font: bold 1.25em/1 var(--primary-font);
-  letter-spacing: 1px;
-  color: white;
+  /* font: bold 1.25em/1 var(--primary-font); */
+  /* letter-spacing: 1px; */
+  /* color: white; */
   text-transform: uppercase;
-  text-shadow: 0px -1px 0px #0374a0;
   transition: all 0.2s ease;
   cursor: pointer;
   margin: 0 1rem 1rem 0;
+  font-size: 1.5rem;
 }
-
+/* 
 .secondary-button {
-  background: var(--color-5);
-}
+  background: var(--color-1);
+} */
 
-button:focus,
+/* button:focus,
 button:active,
 button:focus-within {
   outline: 0;
   border-radius: 4px;
-}
+} */
 
 button:hover {
-  background-color: var(--link-hover-color);
-  transform: scale(3) rotate(40deg);
+  background: var(--color-1);
 }
 
-button:active {
+/* button:active {
   background-color: var(--bg-color);
-}
+} */
 
 .typography-main {
   color: var(--main-text-color);
@@ -239,16 +283,16 @@ em {
 a {
   font-family: var(--primary-font);
   color: var(--link-color);
-  font-weight: bold;
-  text-decoration: none;
+  /* font-weight: bold; */
+  text-decoration: underline;
   transition: all 0.2s;
 }
 
 a:hover {
-  color: var(--link-hover-color);
-  font-size: 4rem;
-  background-color: var(--color-4);
-  opacity: 0.1;
+  /* color: var(--link-hover-color); */
+  /* font-size: 4rem; */
+  /* background-color: var(--color-4); */
+  /* opacity: 0.1; */
 }
 
 p[class*="font-details-"] {
@@ -261,11 +305,15 @@ p[class*="font-details-"] {
 
 .adjectives ul {
   font-size: 2rem;
-  opacity: 0.5;
+  flex-direction: column;
+  flex-wrap: wrap;
 }
 
-.adjectives ul {
-  flex-direction: column;
+.adjectives ul li {
+  padding: 12px;
+  font-size: 1em;
+  color: var(--main-text-color);
+  font-weight: bold;
 }
 
 footer {
@@ -281,7 +329,7 @@ footer {
 
   .swatches li {
     margin-right: 3%;
-    height: 10vw;
+    height: 5vw;
     width: 20%;
   }
 
